@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlApiPersonas: "https://apipersonasBROMA.com"
+  urlApiPersonas: "https://servicioapipersonasmvcpgs.azurewebsites.net/"
 };
 
 /*

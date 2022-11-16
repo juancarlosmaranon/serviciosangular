@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
-import { Global } from "../Global";
+import { Global } from "./../global";
+import { environment } from "src/environments/environment";
 
 @Injectable()
 export class PersonasService{
@@ -10,7 +11,7 @@ export class PersonasService{
     constructor(private _http:HttpClient){}
     getPersonas(): Promise<any>{
         var request = "/api/personas";
-        var url = Global.urlApiPersonas +request;
+        var url = environment.urlApiPersonas +request;
         //TENEMOS DOS FORMAS DE TRABJAR CON LOS SERVICIOS (promesas)
         //1) COMO EN VUE: CREAR UNA PROMESA AQUI Y CAPTURARLA DENTRO
         //DE LA PETICION
